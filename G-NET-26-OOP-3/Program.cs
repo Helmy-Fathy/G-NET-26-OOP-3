@@ -18,6 +18,20 @@
             //e) A method receives a Logger as a parameter and calls it inside the method only.
             //e) => Dependency
             #endregion
+
+            #region Q2
+            //Q2 : Answer the following questions about access modifiers and sealed:
+            //a) A parent class has a protected field. Can a child class in a different assembly access it? What about through an object instance from outside?
+            //a) => Yes, a child class in a different assembly can access a protected field,but accessing it through an object instance from outside is not allowed . 
+            //b) What is the difference between protected internal and private protected?
+            //b) => - protected internal : a member is accessible to any code in the same assembly, OR to any derived class even in a different assembly. 
+            //      - private protected : a member is only accessible to a derived class that is also in the same assembly. 
+            //c) What does the sealed keyword do when applied to a class? What about when applied to a method?
+            //c) => - On a class: It prevents the class from being inherited at all. No other class can derive from it.
+            //      - On a method: sealed can only be applied to a method that is overriding a virtual method from a base class. It stops the override chain at that point.
+            //d) Can you create an object from a sealed class using new? Why or why not?
+            //d) => Yes, absolutely. sealed has no effect on instantiation, it only restricts inheritance.
+            #endregion
             #endregion
         }
     }
