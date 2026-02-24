@@ -27,7 +27,6 @@ namespace G_NET_26_OOP_3
                 if (_tickets[i] == null)
                 {
                     _tickets[i] = t;
-                    Console.WriteLine($"Ticket #{t.TicketId} added to {CinemaName}.");
                     return true;
                 }
             }
@@ -38,36 +37,33 @@ namespace G_NET_26_OOP_3
 
         public void PrintAllTickets()
         {
-            Console.WriteLine($"\n===== [{CinemaName}] Tickets =====");
-
-
+            Console.WriteLine("\n========== All Tickets ==========");
+            bool anyTicket = false;
 
             for (int i = 0; i < _tickets.Length; i++)
             {
                 if (_tickets[i] != null)
                 {
                     Console.WriteLine(_tickets[i].ToString());
+                    anyTicket = true;
                 }
             }
 
-
-
-            Console.WriteLine("==================================\n");
+            if (!anyTicket)
+                Console.WriteLine("No tickets have been added yet.");
         }
 
 
         public void OpenCinema()
         {
-            Console.WriteLine($"\n>> {CinemaName} is opening...");
+            Console.WriteLine("========== Cinema Opened ==========");
             _projector.Start();
-            Console.WriteLine($">> {CinemaName} is now OPEN. Enjoy the show!\n");
         }
 
         public void CloseCinema()
         {
-            Console.WriteLine($"\n>> {CinemaName} is closing...");
+            Console.WriteLine("========== Cinema Closed ==========");
             _projector.Stop();
-            Console.WriteLine($">> {CinemaName} is now CLOSED. Goodbye!\n");
         }
 
         public override string ToString()

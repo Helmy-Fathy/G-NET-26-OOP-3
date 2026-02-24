@@ -54,7 +54,7 @@ namespace G_NET_26_OOP_1
 
         public override string ToString()
         {
-            return $"[Ticket #{TicketId}] Movie: {MovieName} | Price: {Price:C} | Price After Tax (14%): {PriceAfterTax:C}";
+            return $"Ticket #{TicketId} | {MovieName} | Price: {Price} EGP | After Tax: {PriceAfterTax:F2} EGP";
         }
     }
 }

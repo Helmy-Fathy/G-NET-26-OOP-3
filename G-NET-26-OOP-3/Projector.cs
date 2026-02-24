@@ -19,24 +19,14 @@ namespace G_NET_26_OOP_3
 
         public void Start()
         {
-            if (IsRunning)
-            {
-                Console.WriteLine($"Projector [{Model}] is already running.");
-                return;
-            }
             IsRunning = true;
-            Console.WriteLine($"Projector [{Model}] started. Ready to screen!");
+            Console.WriteLine("Projector started.");
         }
 
         public void Stop()
         {
-            if (!IsRunning)
-            {
-                Console.WriteLine($"Projector [{Model}] is already off.");
-                return;
-            }
             IsRunning = false;
-            Console.WriteLine($"Projector [{Model}] stopped.");
+            Console.WriteLine("Projector stopped.");
         }
 
         public override string ToString()

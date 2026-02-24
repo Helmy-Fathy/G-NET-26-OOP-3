@@ -24,7 +24,7 @@ namespace G_NET_26_OOP_3
 
         public override string ToString()
         {
-            return base.ToString() + $" | Lounge Access: {LoungeAccess} | Service Fee: {ServiceFee:C} | Total After Tax + Fee: {PriceAfterTax:C}";
+            return base.ToString() + $" | Lounge: {(LoungeAccess ? "Yes" : "No")} | Service Fee: {ServiceFee} EGP";
         }
     }
 }

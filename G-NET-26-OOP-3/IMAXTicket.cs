@@ -35,7 +35,7 @@ namespace G_NET_26_OOP_3
 
         public override string ToString()
         {
-            return base.ToString() + $" | 3D: {Is3D}";
+            return base.ToString() + $" | IMAX 3D: {(Is3D ? "Yes" : "No")}";
         }
     }
 }

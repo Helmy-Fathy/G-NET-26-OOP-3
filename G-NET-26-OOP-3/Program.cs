@@ -1,4 +1,7 @@
-﻿namespace G_NET_26_OOP_3
+﻿using G_NET_26_OOP_1;
+using G_NET_26_OOP_2;
+
+namespace G_NET_26_OOP_3
 {
     internal class Program
     {
@@ -32,6 +35,33 @@
             //d) Can you create an object from a sealed class using new? Why or why not?
             //d) => Yes, absolutely. sealed has no effect on instantiation, it only restricts inheritance.
             #endregion
+            #endregion
+
+            #region Part 02 : Practical (Extending the Movie Ticket Booking System)
+            Cinema cinema = new Cinema("Grand Rex", "Sony 4K Laser");
+            cinema.OpenCinema();
+
+            Console.WriteLine();
+
+            StandardTicket standard = new StandardTicket("Inception", 120m, "A-5");
+            VIPTicket vip = new VIPTicket("Avengers", 200m, true);
+            IMAXTicket imax = new IMAXTicket("Dune", 180m, false);
+
+            cinema.AddTicket(standard);
+            cinema.AddTicket(vip);
+            cinema.AddTicket(imax);
+
+            cinema.PrintAllTickets();
+
+            Console.WriteLine("\n========== Statistics ==========");
+            Console.WriteLine($"Total Tickets Created: {Ticket.GetTotalTickets()}");
+            Console.WriteLine();
+            Console.WriteLine($"Booking Ref 1: {BookingHelper.GenerateBookingReference()}");
+            Console.WriteLine($"Booking Ref 2: {BookingHelper.GenerateBookingReference()}");
+
+            Console.WriteLine();
+
+            cinema.CloseCinema();
             #endregion
         }
     }
